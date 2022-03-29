@@ -1,0 +1,51 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container
+{
+    width: 80%;
+    min-width: 950px;
+    height: 100vh;
+    margin: 0 auto;
+   
+}
+
+.flex
+{
+    display: flex;
+}
+
+
+li
+{
+    text-decoration: none;
+    list-style: none;
+}
+
+i
+{
+    color: rgb(177, 177, 177);
+}
+
+.aside-sx
+{
+    width: 35%;
+    float: left;
+}
+
+
+
+
+
+
+
