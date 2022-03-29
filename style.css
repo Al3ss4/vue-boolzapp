@@ -229,5 +229,37 @@ h5{
 
 .conversazione{
     background-image: url(img/mine.jpg);
-    height: 700px;
+    height: 690px;
+}
+
+
+
+.send
+{
+    height: 70px;
+    background-color: rgb(243, 238, 234);
+}
+
+.send i
+{
+    padding: 20px 10px;
+    font-size: 26px;
+}
+
+.send i:hover
+{
+    color: lightblue;
+    cursor: pointer;
+}
+
+.send input
+{
+    margin-top: 10px;
+    height: 70%;
+    width: 100%;
+}
+
+.send:last-child i
+{
+    margin-right: 15px;
 }
