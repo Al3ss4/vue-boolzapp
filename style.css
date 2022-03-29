@@ -79,6 +79,40 @@ i
     
 }
 
+/*! NOTIFICHE */
+
+.notifiche
+{
+    background: rgb(138, 211, 241);
+    padding: 10px;
+}
+
+h5{
+    font-size: 0.9rem!important;
+}
+.notifiche i
+{
+    font-size: 30px;
+    background-color: rgb(242, 251, 255);
+    border-radius: 50%;
+    color: rgb(138, 211, 241);
+    padding: 12px;
+    margin-right: 5px;
+}
+
+
+.notifiche-text a
+{
+    font-size: 14px;
+    color: rgb(79, 116, 147);
+}
+
+.notifiche-text
+{
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
 
 /*! SEARCH */
 
@@ -106,6 +140,7 @@ i
     width: 75%;
     margin: 0 2px;
 }
+
 
 
 
