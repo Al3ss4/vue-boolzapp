@@ -226,3 +226,8 @@ h5{
 {
     line-height: 40px;
 }
+
+.conversazione{
+    background-image: url(img/mine.jpg);
+    height: 700px;
+}
