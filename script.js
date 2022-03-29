@@ -183,6 +183,7 @@ const app = new Vue({
         imgURLContatti: function(a, b){
             return `img/${a}${b}.jpg`;
         },
+      
     }
 })
 
