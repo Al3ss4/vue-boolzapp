@@ -175,3 +175,54 @@ h5{
 
 
 
+.aside-dx
+{
+    width: calc( 100% - 35% );
+    float: left;
+}
+
+.text-utente
+{
+    margin-top: 10px;
+}
+
+.accesso
+{
+    font-size: 14px;
+    color: green;
+    font-weight: bold;
+    margin-top: 5px;
+}
+/*! CHAT PRINCIPALE */
+
+
+
+.chat-principale
+{
+    background-color: rgb(237, 237, 237);
+    height: 70px;
+}
+
+.chat-principale i
+{
+    margin-top: 10px;
+}
+
+
+.chat-principale i:last-child
+{
+    margin-right: 20px;
+}
+
+.chat-logo img
+{
+    float: left;
+    width: 55px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.chat-logo p
+{
+    line-height: 40px;
+}
