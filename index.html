@@ -62,12 +62,12 @@
                     <div class="chat">
                         <ul>
                             <li class="other-chat flex " v-for="(contatti, index) in chatContatti"
-                                 @click="contact(index)">
+                                @click="contact(index)">
                                 <img :src="imgURLContatti('avatar', contatti.avatar)">
                                 <div class="contact-list">
                                     <div>{{contatti.name}}</div>
                                     <div>{{getLastMessage(contatti)}}</div>
-                                    
+
                                 </div>
                             </li>
 
@@ -94,57 +94,57 @@
                             <p>Sofia</p>
                        
                     </div> -->
-                    
+
                     <div class="chat-logo clearfix">
                         <img :src="imgURLContatti('avatar', chatContatti[counter].avatar)">
-                        <div>  <!-- text-container l'ho riutilizzato dalla sezione contatti -->
-                            <p class="contatti-chat">{{chatContatti[counter].name}}</p>
-                            
-                        </div>
-                </div>
 
-                    <div class="icon">
-                        <i class="fas fa-search"></i>
-                        <i class="fas fa-paperclip"></i>
-                        <i class="fas fa-ellipsis-v"></i>
+                        <p class="contatti-chat">{{chatContatti[counter].name}}</p>
+
                     </div>
                 </div>
 
-                <!-- /header dx-->
+                <div class="icon">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
 
-                <!-- conversazione -->
+            <!-- /header dx-->
 
-                <div class="conversazione ">
-                    <div v-for="(contatti, index) in chatContatti[counter].messages">
-                        <div v-if="contatti.status == 'sent'" class=" row_new justify-end">
-                            <div class="speech-bubble send-box">
-                                <div>{{contatti.message}}</div>
-                                <div>{{contatti.date}}</div>
-                            </div>
+            <!-- conversazione -->
+
+            <div class="conversazione ">
+                <div v-for="(contatti, index) in chatContatti[counter].messages">
+                    <div v-if="contatti.status == 'sent'" class=" row_new justify-end">
+                        <div class="speech-bubble send-box">
+                            <div>{{contatti.message}}</div>
+                            <div>{{contatti.date}}</div>
                         </div>
+                    </div>
 
-                        <div class v-if="contatti.status =='received'">
-                            <div class="speech-bubble received-box">
-                                <div>{{contatti.message}}</div>
-                                <div class="time">{{contatti.date}}</div>
-                            </div>
+                    <div class v-if="contatti.status =='received'">
+                        <div class="speech-bubble received-box">
+                            <div>{{contatti.message}}</div>
+                            <div>{{contatti.date}}</div>
                         </div>
                     </div>
                 </div>
-                <!-- /conversazione -->
-                <!-- send messages -->
-                <div class="send flex">
-                    <i class="fas fa-smile"></i>
-                    <input type="text" name="send" placeholder="Scrivi un messaggio"><i class="fas fa-paper-plane"></i>
+            </div>
+            <!-- /conversazione -->
+            <!-- send messages -->
+            <div class="send flex">
+                <i class="fas fa-smile"></i>
+                <input type="text" name="send" placeholder="Scrivi un messaggio"><i class="fas fa-paper-plane"></i>
 
-                    <i class="fas fa-microphone"></i>
-
-                </div>
+                <i class="fas fa-microphone"></i>
 
             </div>
-            <!-- /aside dx -->
+
         </div>
-        <!-- / container -->
+        <!-- /aside dx -->
+    </div>
+    <!-- / container -->
     </div>
 </body>
 
