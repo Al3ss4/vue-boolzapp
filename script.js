@@ -175,7 +175,19 @@ Milestone 2
 messaggi relativi al contatto attivo all’interno del pannello della conversazione
 ● Click sul contatto mostra la conversazione del contatto cliccato
 */
-
+/*
+Milestone 3
+● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
+“enter” il testo viene aggiunto al thread sopra, come messaggio verde
+● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
+un “ok” come risposta, che apparirà dopo 1 secondo.
+*/
+/*
+Milestone 4
+● Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
+contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo
+“mar” rimangono solo Marco e Martina
+*/
 const app = new Vue({
 
     el: '#app',
@@ -203,6 +215,18 @@ const app = new Vue({
         contact(index) {
             this.counter = index;
             console.log(this.counter);
+        },
+        // ricerco i contatti nell'input 
+        searchContact() {
+            //uso forEach per ciclare
+            this.chatContatti.forEach((user) => {
+                //se il mio input includerà caratteri del mio user.name allora ritornerà true e mi cercherà l'utente, altrimenti ritornerà false e non apparirà nulla 
+                if (user.name.toLowerCase().includes(this.search.toLowerCase())) {
+                    user.visible = true;
+                } else {
+                    user.visible = false;
+                }
+            });
         },
 
     }

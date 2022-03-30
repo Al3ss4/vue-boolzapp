@@ -53,21 +53,22 @@
                     <!-- search -->
                     <div class="search">
                         <a href="#"><i class="fas fa-search"></i></a>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="search"
+                            @keyup="searchContact">
                     </div>
-                    <!-- search -->
+                    <!-- /search -->
 
 
                     <!-- chat -->
                     <div class="chat">
                         <ul>
                             <li class="other-chat flex " v-for="(contatti, index) in chatContatti"
-                                 @click="contact(index)">
+                                v-if="contatti.visible" @click="contact(index)">
                                 <img :src="imgURLContatti('avatar', contatti.avatar)">
                                 <div class="contact-list">
                                     <div>{{contatti.name}}</div>
                                     <div>{{getLastMessage(contatti)}}</div>
-                                    
+
                                 </div>
                             </li>
 
@@ -76,7 +77,7 @@
                     <!-- /chat -->
 
                 </div>
-                <!-- main sx -->
+                <!-- /main sx -->
 
 
             </div>
@@ -87,21 +88,13 @@
 
                 <!-- header dx -->
                 <div class="header-dx chat-principale flex">
-
-                    <!-- 
-                        <img src="img/avatar_io.jpg" alt="Logo">
-                        <div class="text-utente">
-                            <p>Sofia</p>
-                       
-                    </div> -->
-                    
                     <div class="chat-logo clearfix">
                         <img :src="imgURLContatti('avatar', chatContatti[counter].avatar)">
-                        <div>  
+                        <div>
                             <p class="contatti-chat">{{chatContatti[counter].name}}</p>
-                            
+
                         </div>
-                </div>
+                    </div>
 
                     <div class="icon">
                         <i class="fas fa-search"></i>
@@ -132,6 +125,7 @@
                     </div>
                 </div>
                 <!-- /conversazione -->
+
                 <!-- send messages -->
                 <div class="send flex">
                     <i class="fas fa-smile"></i>
@@ -140,7 +134,7 @@
                     <i class="fas fa-microphone"></i>
 
                 </div>
-
+                <!-- / send messages -->
             </div>
             <!-- /aside dx -->
         </div>
