@@ -193,9 +193,10 @@ const app = new Vue({
     el: '#app',
 
     data: {
-
+        search: '',
         chatContatti: contacts,
         counter: 0,
+        newMessage: ''
     },
     methods: {
 
@@ -204,12 +205,19 @@ const app = new Vue({
             return `img/${a}${b}.jpg`;
         },
         //visualizzo l'ultimo messaggio 
-        getLastMessage: function(item){
+        getLastMessage: function (item) {
             //console.log(item.name),item ;
-            const messages =item.messages;
-        
-            const lastMessage = messages.length > 0?  messages[messages.length-1].message : '';
+            const messages = item.messages;
+
+            const lastMessage = messages.length > 0 ? messages[messages.length - 1].message : '';
             return lastMessage;
+        },
+        getLastDateMessage: function (element) {
+            
+            const dateProva = element.messages;
+
+            const lastMessageDate = dateProva.length > 0 ? dateProva[dateProva.length - 1].date : '';
+            return lastMessageDate;
         },
         // visualizzo tramite click i messaggi
         contact(index) {
@@ -228,6 +236,7 @@ const app = new Vue({
                 }
             });
         },
+      
 
     }
 })

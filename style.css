@@ -134,7 +134,7 @@ h5{
     padding: 8px 20px 12px 20px;
 }
 
-.search input {
+.search input , .send input {
     width: 130px;
     border: none;
     border-radius: 4px;
@@ -231,7 +231,7 @@ h5{
 
 .chat-logo p
 {
-    line-height: 40px;
+    line-height: 10px;
 }
 
 .conversazione{
@@ -312,3 +312,11 @@ h5{
 .contatti-chat{
     padding-top: 15px;
 }
+.time
+{
+    font-size: 12px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
