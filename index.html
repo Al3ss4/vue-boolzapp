@@ -132,7 +132,8 @@
                 <!-- send messages -->
                 <div class="send flex">
                     <i class="fas fa-smile"></i>
-                    <input type="text" name="send" placeholder="Scrivi un messaggio"><i class="fas fa-paper-plane"></i>
+                    <input type="text" name="send" placeholder="Scrivi un messaggio" v-model="newMessage"
+                        @keyup.enter="dynamicMessages"><i class="fas fa-paper-plane"></i>
 
                     <i class="fas fa-microphone"></i>
 

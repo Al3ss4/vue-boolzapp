@@ -236,7 +236,30 @@ const app = new Vue({
                 }
             });
         },
-      
+        dynamicMessages() {
+
+            const personalProfileMessage = {
+             date: dayjs().format("HH:mm:ss"),
+                message: this.newMessage,
+                status: 'sent'
+            }
+            this.chatContatti[this.counter].messages.push(personalProfileMessage)
+            
+
+            this.newMessage = ""
+
+            // console.log(nuovoMessaggio);
+            // console.log(this.newMessage)
+
+            setTimeout(() => {
+                const newAnswer = {
+                    date: dayjs().format("HH:mm:ss"),
+                    message: "Ok",
+                    status: 'received'
+                }
+                this.chatContatti[this.counter].messages.push(newAnswer)
+            }, 1000);
+        }
 
     }
 })
